@@ -1,0 +1,301 @@
+body{
+    position: relative;
+    background: #F3F5FC;
+}
+
+main{
+    display: flex;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+}
+
+.vector-alura{  
+    position: relative;
+    left: 84px;
+    top: 40px;
+}
+
+.entrada{
+    position: absolute;
+    width: 40%;
+    height: 288px;
+    left: 240px;
+    top: 168px;
+    background:  #F3F5FC;
+    border: none;
+    font-style: normal;
+    font-size: 32px;
+    line-height: 150%;
+    color: #0A3871;  
+}
+
+.entrada::placeholder{
+    color: #0A3871;  
+}
+
+.aviso-img{
+    position: absolute;
+    top: 852px;
+    left: 240px;
+}
+
+.informação p{
+    position: absolute;
+    top: 851px;
+    left: 240px;
+    padding-left: 24px;
+    width: 228px;
+    height: 18px;
+    font-size: 12px;
+    line-height: 150%;
+    color: #495057;
+    opacity: 0.8;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+#button-cripto, #button-descripto, #button-copy{  
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    position: absolute;
+    top: 885px;
+    height: 67px;
+    width: 328px;
+    border-radius: 24px;
+    padding: 24px;
+    border: 1px solid #0A3871;
+}
+
+#button-cripto{
+    left: 240px;
+    background:#0A3871;
+    color: #FFFFFF;
+}
+
+#button-descripto{
+    left: 592px;
+    background: #D8DFE8;
+    color: #0A3871;   
+}
+
+.saida-mensagem{
+    position: absolute;
+    width: 400px;
+    height: 944px;
+    top: 40px;
+    left: 1000px;
+    background: #FFFFFF;
+    background-image: url(nao-encontrado.png);
+    background-repeat: no-repeat;
+    background-position: 32px 243px ;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+
+.saida-mensagem:focus{
+    outline: none;
+}
+
+.tela-inicial h1, p{
+    flex: none;
+    align-self: stretch;
+    flex-grow: 0;
+    text-align: center;
+    left: 32px;
+}
+
+.tela-inicial h1{
+    position: absolute;
+    top: 579px;
+    width: 336px;
+    height: 58px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    color: #343A40;
+    order: 0;
+}
+
+.tela-inicial p{
+    position: absolute;
+    top: 653px;
+    width: 336px;
+    height: 48px;
+    font-size: 16px;    
+    line-height: 150%;
+    color: #495057;
+    order: 1;
+}
+
+.saida{
+    position: absolute;
+    width: 336px;
+    height: 781px;
+    left: 32px;
+    top: 32px;
+    color: #495057;
+    font-size: 24px;
+    line-height: 150%;
+    border: none;
+    display: none;
+}
+
+#button-copy{
+    background: #FFFFFF;
+    color: #0A3871;
+    left: 36px;
+    top: 845px;
+    display: none;
+}
+
+@media screen and (max-width:900px){
+    .vector-alura{  
+        left: 40px;
+        top: 73.42px;
+    }
+
+    .entrada, .saida-mensagem, .tela-inicial h1, .tela-inicial p, .saida, #button-copy {
+        width: 80%;
+    }
+
+    .entrada{
+        height: 48px;
+        left: 40px;
+        top: 240px;
+    }
+
+    .aviso-img{
+        top: 620px;
+        left: 40px;
+    }
+
+    .informação p{
+        top: 619px;
+        left: 64px;
+    }
+
+    #button-cripto, #button-descripto{  
+        top: 670px;
+        height: 67px;
+        width: 45%;
+    }
+    
+    #button-cripto{
+        left: 40px;
+    }
+    
+    #button-descripto{
+        left: 396px;  
+    }
+
+    .saida-mensagem{
+        height: 133px;
+        top: 800px;
+        left: 40px;
+        background-image: none;
+    }
+
+    .tela-inicial h1{
+        top: 32px;
+        left: 32px;
+        height: 29px;
+    }
+    
+    .tela-inicial p{
+        top: 77px;
+        left: 32px;
+        height: 24px;
+    }
+
+    .saida{
+        height: 180px;
+    }
+    
+    #button-copy{
+        height: 343px;
+        left: 40px;
+        top: 1001px;
+        display: none;
+
+    }
+}
+
+@media screen and (max-width:480px){
+    .vector-alura{  
+        left: 4.27%;
+        top: 25%;;
+    }
+
+    .entrada, .saida-mensagem, .tela-inicial h1, .tela-inicial p, .saida, #button-copy {
+        width: 91.5%;
+    }
+
+    .entrada{
+        height: 48px;
+        left: 16px;
+        top: 152px;
+    }
+
+    .aviso-img{
+        top: 452px;
+        left: 40px;
+    }
+
+    .informação p{
+        top: 451px;
+        left: 40px;
+    }
+
+    #button-cripto, #button-descripto{  
+        top: 670px;
+        height: 67px;
+        width: 45%;
+    }
+    
+    #button-cripto{
+        top: 485px;
+        left: 16px;
+    }
+    
+    #button-descripto{
+        top: 576px;
+        left: 16px;  
+    }
+
+    .saida-mensagem{
+        height: 186px;
+        top: 707px;
+        left: 24px;
+        background-image: none;
+    }
+
+    .tela-inicial h1{
+        top: 32px;
+        left: 32px;
+        height: 58px;
+    }
+    
+    .tela-inicial p{
+        top: 106px;
+        left: 32px;
+        height: 48px;
+    }
+
+    .saida{
+        height: 432px;
+    }
+    
+    #button-copy{
+        height: 595px;
+        left: 32px;
+        top: 496px;
+        display: none;
+
+    }
+}
