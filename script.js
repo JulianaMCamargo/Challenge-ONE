@@ -49,7 +49,7 @@ function exibirSaidaMensagem() {
     var buttonCopy = document.getElementById("button-copy");
     buttonCopy.style.display = "block";
     var textoSaida = document.getElementsByClassName("saida")[0];
-    textoSaida.style.display = "flex";
+    textoSaida.style.display = "block";
     var telaInicial = document.getElementsByClassName("tela-inicial")[0];
-    telaInicial.style.opacity = "0";
+    telaInicial.style.display = "none";
 }

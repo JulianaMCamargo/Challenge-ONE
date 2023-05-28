@@ -1,27 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body{
-    position: relative;
     background: #F3F5FC;
 }
 
 main{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
 }
 
+.container {
+    display: flex;
+    height: 92%;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+header{
+    height: 70px;
+    width: 90%;
+    margin: auto;
+}
+
 .vector-alura{  
-    position: relative;
-    left: 84px;
-    top: 40px;
+    margin: 10px;
+}
+
+.entrada-mensagem{
+    width: 700px;
 }
 
 .entrada{
-    position: absolute;
-    width: 40%;
-    height: 288px;
-    left: 240px;
-    top: 168px;
+    width: 100%;
+    height: 50vh;
     background:  #F3F5FC;
     border: none;
     font-style: normal;
@@ -34,17 +54,11 @@ main{
     color: #0A3871;  
 }
 
-.aviso-img{
-    position: absolute;
-    top: 852px;
-    left: 240px;
+.informação{
+    display: flex;
 }
 
 .informação p{
-    position: absolute;
-    top: 851px;
-    left: 240px;
-    padding-left: 24px;
     width: 228px;
     height: 18px;
     font-size: 12px;
@@ -56,44 +70,42 @@ main{
     flex-grow: 0;
 }
 
+.decodificadores{
+    display: flex;
+    width: 100%;
+    gap:24px;
+}
+
 #button-cripto, #button-descripto, #button-copy{  
     font-size: 16px;
     line-height: 19px;
     text-align: center;
-    flex: none;
-    order: 0;
-    flex-grow: 1;
-    position: absolute;
-    top: 885px;
     height: 67px;
-    width: 328px;
+    width: 90%;
     border-radius: 24px;
     padding: 24px;
     border: 1px solid #0A3871;
+    cursor: pointer;
 }
 
 #button-cripto{
-    left: 240px;
     background:#0A3871;
     color: #FFFFFF;
 }
 
 #button-descripto{
-    left: 592px;
     background: #D8DFE8;
     color: #0A3871;   
 }
 
 .saida-mensagem{
-    position: absolute;
-    width: 400px;
-    height: 944px;
-    top: 40px;
-    left: 1000px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    padding: 0 20px;
     background: #FFFFFF;
-    background-image: url(nao-encontrado.png);
-    background-repeat: no-repeat;
-    background-position: 32px 243px ;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
 }
@@ -102,30 +114,26 @@ main{
     outline: none;
 }
 
+.tela-inicial img{
+    width: 100%;
+}
+
 .tela-inicial h1, p{
+    margin: 10px 0;
     flex: none;
     align-self: stretch;
     flex-grow: 0;
     text-align: center;
-    left: 32px;
 }
 
 .tela-inicial h1{
-    position: absolute;
-    top: 579px;
-    width: 336px;
-    height: 58px;
     font-weight: 700;
     font-size: 24px;
     line-height: 120%;
     color: #343A40;
-    order: 0;
 }
 
 .tela-inicial p{
-    position: absolute;
-    top: 653px;
-    width: 336px;
     height: 48px;
     font-size: 16px;    
     line-height: 150%;
@@ -134,11 +142,7 @@ main{
 }
 
 .saida{
-    position: absolute;
-    width: 336px;
-    height: 781px;
-    left: 32px;
-    top: 32px;
+    width: 100%;
     color: #495057;
     font-size: 24px;
     line-height: 150%;
@@ -149,153 +153,36 @@ main{
 #button-copy{
     background: #FFFFFF;
     color: #0A3871;
-    left: 36px;
-    top: 845px;
     display: none;
+    margin-top: 10px;
 }
 
-@media screen and (max-width:900px){
-    .vector-alura{  
-        left: 40px;
-        top: 73.42px;
-    }
+.tela-final{
+    margin: 15px 0;
+}
 
-    .entrada, .saida-mensagem, .tela-inicial h1, .tela-inicial p, .saida, #button-copy {
-        width: 80%;
+@media screen and (max-width:1000px){
+    .container {
+        flex-direction:column; 
+        width:90%; 
     }
-
-    .entrada{
-        height: 48px;
-        left: 40px;
-        top: 240px;
+    .entrada-mensagem {
+        margin:20px 0;
+        width:100%;
     }
-
-    .aviso-img{
-        top: 620px;
-        left: 40px;
+    .tela-inicial img {
+        display:none;
     }
-
-    .informação p{
-        top: 619px;
-        left: 64px;
+    .tela-final {
+        width: 100%;
     }
-
-    #button-cripto, #button-descripto{  
-        top: 670px;
-        height: 67px;
-        width: 45%;
-    }
-    
-    #button-cripto{
-        left: 40px;
-    }
-    
-    #button-descripto{
-        left: 396px;  
-    }
-
-    .saida-mensagem{
-        height: 133px;
-        top: 800px;
-        left: 40px;
-        background-image: none;
-    }
-
-    .tela-inicial h1{
-        top: 32px;
-        left: 32px;
-        height: 29px;
-    }
-    
-    .tela-inicial p{
-        top: 77px;
-        left: 32px;
-        height: 24px;
-    }
-
-    .saida{
-        height: 180px;
-    }
-    
-    #button-copy{
-        height: 343px;
-        left: 40px;
-        top: 1001px;
-        display: none;
-
+    .saida-mensagem {
+        width:100%;
+        margin-left:0;
+        display:block;
     }
 }
 
 @media screen and (max-width:480px){
-    .vector-alura{  
-        left: 4.27%;
-        top: 25%;;
-    }
-
-    .entrada, .saida-mensagem, .tela-inicial h1, .tela-inicial p, .saida, #button-copy {
-        width: 91.5%;
-    }
-
-    .entrada{
-        height: 48px;
-        left: 16px;
-        top: 152px;
-    }
-
-    .aviso-img{
-        top: 452px;
-        left: 40px;
-    }
-
-    .informação p{
-        top: 451px;
-        left: 40px;
-    }
-
-    #button-cripto, #button-descripto{  
-        top: 670px;
-        height: 67px;
-        width: 45%;
-    }
-    
-    #button-cripto{
-        top: 485px;
-        left: 16px;
-    }
-    
-    #button-descripto{
-        top: 576px;
-        left: 16px;  
-    }
-
-    .saida-mensagem{
-        height: 186px;
-        top: 707px;
-        left: 24px;
-        background-image: none;
-    }
-
-    .tela-inicial h1{
-        top: 32px;
-        left: 32px;
-        height: 58px;
-    }
-    
-    .tela-inicial p{
-        top: 106px;
-        left: 32px;
-        height: 48px;
-    }
-
-    .saida{
-        height: 432px;
-    }
-    
-    #button-copy{
-        height: 595px;
-        left: 32px;
-        top: 496px;
-        display: none;
-
-    }
+   
 }
